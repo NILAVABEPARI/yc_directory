@@ -9,8 +9,10 @@ export default async function Home({ searchParams }: {
 }) {
 
   const query = (await searchParams).query;
+  const params = { search: query || null };
+
   // const posts = await client.fetch(STARTUPS_QUERY); // older fetch
-  const { data: posts } = await sanityFetch({ query: STARTUPS_QUERY }); // for getting realtime live data
+  const { data: posts } = await sanityFetch({ query: STARTUPS_QUERY, params }); // for getting realtime live data
   console.log(JSON.stringify(posts, null, 2));
 
   return (
