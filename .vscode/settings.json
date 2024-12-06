@@ -3,6 +3,7 @@
         "easymde",
         "extralight",
         "GROQ",
+        "markdownit",
         "predev"
     ]
 }
